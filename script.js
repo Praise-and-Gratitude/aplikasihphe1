@@ -183,7 +183,7 @@ let biayalistrik= document.getElementById("biayalistrik").value;
 
 
 
-const pengembalian = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(tes10*dailyuse2*monthlyuse2*4*biayalistrik/1000)
+const pengembalian = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round(tes10*dailyuse2*monthlyuse2*4*biayalistrik/1000))
 let rawpengembalian= tes10*dailyuse2*monthlyuse2*4*biayalistrik/1000
 
 
