@@ -144,9 +144,12 @@ let biayalistrik= document.getElementById("biayalistrik").value;
 
     let benefitmargin = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)/5)
     
-    const biayatotal = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5)
+    const biayatotal = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5))
     let rawbiayatotal= (+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5
-
+    const biayatotal2 = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5*2/3))
+    const biayatotal3 = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5*4/3))
+    let rawbiayatotal2 = Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5*2/3)
+    let rawbiayatotal3 = Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5*4/3)
     
     
     
@@ -165,6 +168,9 @@ let biayalistrik= document.getElementById("biayalistrik").value;
 
     document.getElementById('tesst9').innerHTML = biayatotal
 
+    document.getElementById('tesst9x').innerHTML = biayatotal2
+
+    document.getElementById('tesst9xx').innerHTML = biayatotal3
    
     
     
@@ -199,7 +205,16 @@ document.getElementById('testes13').innerHTML = pengembalian
 document.getElementById('newpembagian').innerHTML= Math.trunc(Math.round(rawbiayatotal)/Math.round(rawpengembalian))
 
 document.getElementById('sisapembagian2').innerHTML= Math.trunc((rawbiayatotal%rawpengembalian)/Math.round(rawpengembalian)*12)
-  }
+
+document.getElementById('newpembagian3').innerHTML= Math.trunc(Math.round(rawbiayatotal2)/Math.round(rawpengembalian))
+
+document.getElementById('sisapembagian3').innerHTML= Math.trunc((rawbiayatotal2%rawpengembalian)/Math.round(rawpengembalian)*12)
+
+document.getElementById('newpembagian4').innerHTML= Math.trunc(Math.round(rawbiayatotal3)/Math.round(rawpengembalian))
+  
+document.getElementById('sisapembagian4').innerHTML= Math.trunc((rawbiayatotal3%rawpengembalian)/Math.round(rawpengembalian)*12)
+
+}
 
 
   let button = document.getElementById('button3');
