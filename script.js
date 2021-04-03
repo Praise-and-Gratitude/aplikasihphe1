@@ -142,7 +142,7 @@ let biayalistrik= document.getElementById("biayalistrik").value;
 
     let benefitmargin3= 250000
 
-    let benefitmargin = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)/5)
+    let benefitmargin = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)/5))
     
     const biayatotal = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5))
     let rawbiayatotal= (+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5
