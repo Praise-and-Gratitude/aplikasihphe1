@@ -64,7 +64,7 @@
 <br>
 <br>
 <div class="container">
-        <div class="border border-primary">
+        <div class="border border-primary p-3">
         <div class="text-center">
             <h3 class="text-center mt-3 text-primary">Dimensi dan Spesifikasi HPHE</h3>
                 </div>
@@ -87,7 +87,7 @@
                             
                             <div class="text-center">
                                 <label>Material</label>
-                                &nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;
                                 <select>
                                     <option>Aluminium</option>
 
@@ -96,7 +96,7 @@
                                 
                                 <br>
                                 <label>Tebal</label>
-                                &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <select>
                                     <option>0.105 mm</option>
 
@@ -104,7 +104,7 @@
                                 </select>
                                 <br>
                                 <label>Jarak antar Fin</label>
-                                &nbsp;&nbsp;&nbsp;
+                                &nbsp;
                                 <select id="jarakfin">
                                     <option id="1mm">1</option>
                                     <option id="2mm">2</option>
@@ -138,7 +138,7 @@
                                 <br>
                                 
                                 <label>Diameter</label>
-                                &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
                                 <select>
                                     <option>10 mm</option>
 
@@ -171,11 +171,6 @@
                                 <select>
                                     <option>Galvalum</option>
                                 <br>
-
-                                
-                                
-
-
                                 </select>
                                 <br>
                                 <label>Panjang Rangka (p)</label>
@@ -250,8 +245,12 @@
              
                 <div class="card-body">
              <div class="text-center">
+                <p>
+                    <label>X<sub>L</sub> </label>  	&nbsp; 	&nbsp; 	 &nbsp; 
+                    <input id="xl" type="number">  mm
+                </p>
              <p>
-                <label>Xt</label>  &nbsp; 
+                <label>X<sub>T</sub></label> 
                 
 
 
@@ -259,17 +258,14 @@
                &nbsp; 	&nbsp;	&nbsp; 	
                 <input id="xt" type="number">  mm
             </p>
+            
             <p>
-                <label>Xl </label> &nbsp; 	&nbsp; 	&nbsp; 	 &nbsp; 
-                <input id="xl" type="number">  mm
-            </p>
-            <p>
-                <label>Jumlah Baris Heat Pipe (sejajar dengan Xl)</label> 
+                <label>Jumlah Baris Heat Pipe (sejajar dengan X<sub>L</sub>)</label> 
                 <br>
                 &nbsp; &nbsp;  <input id="bariss" type="number">
             </p>
             <p>
-                <label>Jumlah Heat Pipe Per Baris (sejajar dengan Xt)</label>
+                <label>Jumlah Heat Pipe Per Baris (sejajar dengan X<sub>T</sub>)</label>
                 <br>
                 &nbsp; &nbsp; <input id="kolom" type="number">
             </p>
@@ -292,18 +288,20 @@
                 <br>
                 <div class="card-body">
                     <br>
+             <p>
+                <label>Panjang Kondensor</label>
+                <input id="kond" type="number">  mm
+            </p>
+            <p>
+                <label>Panjang Adiabatik</label> &nbsp; 
+                <input id="adiab" type="number">  mm
+            </p>
             <p>
                 <label>Panjang Evaporator</label>
                 <input id="evap" type="number">  mm
             </p>
-            <p>
-                <label>Panjang Adiabatik</label>
-                <input id="adiab" type="number">  mm
-            </p>
-            <p>
-                <label>Panjang Kondenser</label>
-                <input id="kond" type="number">  mm
-            </p>
+           
+           
                 <br>
         </div>
         </div>
@@ -319,10 +317,10 @@
     <br>
     <br>
     <div class="container">
-    <div class="border border-danger">
+    <div class="border border-danger p-3">
     
         <div class=" text-center">
-            <h3 class="mt-4 text-danger">Kondisi Operasional HPHE</h3>
+            <h3 class="mt-3 mb-3 text-danger">Kondisi Operasional HPHE </h3>
         </div>
         <div class="text-center mb-4">
             <div class="card-body">
@@ -330,12 +328,12 @@
             <div class="col-12 col-lg-6">
                 <div class="text-center">
                    
-                    <label for="jumlahmodul2" class="text-center">Jumlah Baris Heat Pipe </label> &nbsp;&nbsp;	
+                    <label for="jumlahmodul2" class="text-center">Jumlah Baris Heat Pipe </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <select id="jumlahmodul2" class="text-center"> 	
                      <option value=""></option>
-                     <option value="11">3</option>
-                     <option value="22">6</option>
-                     <option value="33">9</option>
+                     <option value="11">3 Baris</option>
+                     <option value="22">6 Baris</option>
+                     <option value="33">9 Baris</option>
                      
                     </select>
                     <br>
@@ -345,7 +343,7 @@
                     
                     
                     
-                    <label for="tei">Temperatur Memasuki Evaporator (Te,i)</label>
+                    <label for="tei">Temperatur Udara Memasuki Evaporator</label>&nbsp;&nbsp;
                      <select id="tei">
                      <option value=""></option>
                      <option value="30">30 &#8451</option>
@@ -356,7 +354,7 @@
                     </select>
                     <br>
                     <br>
-                    <label for="vei">Kecepatan Memasuki Evaporator (Ve,i)</label>
+                    <label for="vei">Kecepatan Udara Memasuki Evaporator</label>
                      <select id="vei">
                      <option value=""></option>
                      <option value="15">1,5 m/s</option>
@@ -377,16 +375,16 @@
                     
                     
                     <p>
-                        <label>Penggunaan Harian</label> &nbsp;
-                        <input id="dailyuse" type="number"> &nbsp; jam/hari
+                        <label>Penggunaan Harian</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input id="dailyuse" type="number"> &nbsp;&nbsp; jam/hari
                     </p>
                     <p>
-                        <label>Penggunaan Bulanan</label> &nbsp;
-                        <input id="monthlyuse" type="number"> &nbsp;  hari/bulan
+                        <label>Penggunaan Bulanan</label> &nbsp;&nbsp;&nbsp;
+                        <input id="monthlyuse" type="number"> hari/bulan
                     </p>
                     <p>
-                        <label>Biaya Listrik</label> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input id="biayalistrik" type="number"> &nbsp;  Rp/kWh
+                        <label>Biaya Listrik</label> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input id="biayalistrik" type="number"> &nbsp;&nbsp; Rp/kWh
                     </p>
 
 
@@ -422,66 +420,65 @@
 
 
     <div class="container mb-5" id="invisible" style="display:none">
-        <div class="border border-success">
+        <div class="border border-success p-4">
             <div class=" text-center">
-                <h3 class="mt-4 text-success">Hasil Perhitungan</h3>
+                <h3 class="mt-3 mb-3 text-success">Hasil Perhitungan</h3>
             </div>
     
-      <div class="row">
+      <div class="row mb-3">
           <div class="col-12 col-lg-6">
               <div class="card-header text-center mt-4">
                   <h3>Biaya Investasi HPHE</h3>
               </div>
-              <div class="card w-90 text-center mb-4">
-              <div class="card-body">
-              <div class="text-center">
-                  <p>
+              
+              <div class="border">
+             
+                  <p class="d-flex justify-content-between mr-2 ml-2 mt-4">
                       <label>Biaya Material Fin</label>
-                      &nbsp;&nbsp;&nbsp; &nbsp; <span id="tesst2"></span>
+                      <span id="tesst2"></span>
                   </p>
-                  <p>
-                      <label>Biaya Material Rangka</label>
-                      &nbsp;&nbsp;&nbsp; &nbsp; <span id="tesst3"></span>
+                  <p class="d-flex justify-content-between mr-2 ml-2">
+                      <label>Biaya Material Rangka dan Dudukan</label>
+                       <span id="tesst3"></span>
                      
                   </p>
                   
-                  <p>
-                      <label>Biaya Produksi Fin dan Rangka</label>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="tesst5"></span> 
+                  <p class="d-flex justify-content-between mr-2 ml-2">
+                      <label>Biaya Produksi Fin,Rangka dan Dudukan</label>
+                      <span id="tesst5"></span> 
                   </p>
-                  <p>
+                  <p class="d-flex justify-content-between mr-2 ml-2">
                       <label>Biaya Heat Pipe</label>
-                      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<span id="tesst4"></span>  
+                      <span id="tesst4"></span>  
                   </p>
                  
                   
-                  <p>
+                  <p class="d-flex justify-content-between mr-2 ml-2">
                       <label>Biaya Instalasi</label>
-                      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<span id="tesst7"></span>  
+                      <span id="tesst7"></span>  
                   </p>
                  
-                  <p>
+                  <p class="d-flex justify-content-between mr-2 ml-2">
                       <label><i>Benefit Margin(20%)</i></label>
-                      &nbsp; &nbsp;&nbsp;<span id="tesst8"></span>
+                      <span id="tesst8"></span>
                   </p>
                   <hr>
                   
-                  <p>
-                      <label>Biaya Investasi Total</label>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="tesst9"></span>
+                  <p class="d-flex justify-content-between mr-2 ml-2">
+                      <label>Biaya Investasi Total</label><span id="tesst9"></span>
                   </p>
-                  <p>
-                    <label>Range Biaya Investasi Total dengan &#177;30% Margin of Error:</label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="tesst9x"></span> - <span id="tesst9xx"></span>
+                  <p class="d-flex justify-content-between mr-2 ml-2">
+                    <label>&#177;30% Margin of Error</label>
+                    <span><span id="tesst9x"></span> - <span id="tesst9xx"></span></span>
                   </p>
                  
 
                   
                 
                
-              </div>
+              
           </div>
-      </div>
+      
 
           </div>
 
@@ -541,12 +538,12 @@
           </div>
           <div class="card w-90 text-center mb-4">
               <div class="card-body">
-                <p>
-                Payback Period &nbsp;&nbsp;&nbsp;&nbsp;<span id="newpembagian"></span> tahun <span id="sisapembagian2"></span> bulan
+                <p class="d-flex justify-content-between mr-1 ml-1">
+                Payback Period<span><span id="newpembagian"></span> tahun <span id="sisapembagian2"></span> bulan</span>
                 </p>
-                <p>
-                    <label>Range Payback Period dengan &#177;30% Margin of Error:</label>
-                    <br><span id="newpembagian3"></span> tahun  <span id="sisapembagian3"></span> bulan - <span id="newpembagian4"></span> tahun <span id="sisapembagian4"></span> bulan
+                <p class="d-flex justify-content-between mr-1 ml-1">
+                    <label>&#177;30% Margin of Error</label>
+                    <span><span id="newpembagian3"></span> tahun  <span id="sisapembagian3"></span> bulan - <span id="newpembagian4"></span> tahun <span id="sisapembagian4"></span> bulan</span>
                   </p>
                 
                </div>
