@@ -142,14 +142,14 @@ let biayalistrik= document.getElementById("biayalistrik").value;
 
     let benefitmargin3= 250000
 
-    let benefitmargin = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)/5))
+    let benefitmargin = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)/4))
     
-    const biayatotal = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5))
-    let rawbiayatotal= (+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5
-    const biayatotal2 = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5*2/3))
-    const biayatotal3 = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5*4/3))
-    let rawbiayatotal2 = Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5*2/3)
-    let rawbiayatotal3 = Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*6/5*4/3)
+    const biayatotal = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*5/4))
+    let rawbiayatotal= (+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*5/4
+    const biayatotal2 = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*5/4*2/3))
+    const biayatotal3 = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*5/4*4/3))
+    let rawbiayatotal2 = Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*5/4*2/3)
+    let rawbiayatotal3 = Math.round((+benefitmargin1 + +benefitmargin2 + +benefitmargin3)*5/4*4/3)
     
     
     
@@ -183,7 +183,7 @@ let biayalistrik= document.getElementById("biayalistrik").value;
 
 
 
-const pengembalian = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Math.round(tes10*dailyuse2*monthlyuse2*4*biayalistrik/1000))
+const pengembalian = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(tes10*dailyuse2*monthlyuse2*4*biayalistrik/1000)
 let rawpengembalian= tes10*dailyuse2*monthlyuse2*4*biayalistrik/1000
 
 
