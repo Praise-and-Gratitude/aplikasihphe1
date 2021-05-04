@@ -4,6 +4,7 @@
 
 
 function calculate2() 
+/* Input spesifikasi Dimensi dan Spesifikasi HPHE*/
 {   let baris=document.getElementById("baris").value
 	let xt=document.getElementById("xt").value
 	let xl=document.getElementById("xl").value
@@ -12,108 +13,119 @@ function calculate2()
     let evap=document.getElementById("evap").value	
     let adiab=document.getElementById("adiab").value	
     let kond=document.getElementById("kond").value	
+/* End of Input spesifikasi Dimensi dan Spesifikasi HPHE*/
 	
    
-    
+ /* Perhitungan Jarak antar Fin terhadap Biaya Material Fin yang dilambangkan dengan konstanta selllect */   
     const e = document.getElementById('jarakfin')
     const selllect =e.options[e.selectedIndex].text;
+/* Perhitungan Jarak antar Fin terhadap Biaya Material Fin yang dilambangkan dengan konstanta selllect */   
 
     
-
+/*Perhitungan L2 dan L3 */
     let lebar = (Math.round(xl* bariss));
     let kedalaman = (Math.round(xt * kolom));
+/* End of Perhitungan L2 dan L3 */
 
-    let seleect1 = document.getElementById('jumlahmodul2');
+
+/* Input Kondisi Operasional ; Line 350 HTML*/
+let seleect1 = document.getElementById('jumlahmodul2');
 let seleect2 = document.getElementById('tei');
 let seleect3 = document.getElementById('vei');
 
+/*Penentuan heat recovery berdasarkan jumlah baris, temperatur dan kecepatan memasuki evaporator */
 const chooice1  = seleect1.value
 const chooice2 = seleect2.value;
 const chooice3 = seleect3.value;
 
 
   if (chooice1 === '11' && chooice2 === '30' && chooice3 === '15') {
-     tes10 = 87.1 
+     tes10 = 80.4
     } else if (chooice1 === '11' && chooice2 === '30' && chooice3 === '20') {
-      tes10 = 122
+      tes10 = 114.1
     } else if (chooice1 === '11' && chooice2 === '30' && chooice3 === '25') {
-        tes10 = 103.5
+        tes10 = 167.6
     } else if (chooice1 === '22' && chooice2 === '30' && chooice3 === '15') {
-        tes10 = 96.6
+        tes10 = 88.4
     } else if (chooice1 === '22' && chooice2 === '30' && chooice3 === '20') {
-        tes10 = 146.8
+        tes10 = 133.4
     } else if (chooice1 === '22' && chooice2 === '30' && chooice3 === '25') {
-        tes10 = 190.1
+        tes10 = 186.1
     } else if (chooice1 === '33' && chooice2 === '30' && chooice3 === '15') {
-        tes10 = 134.0
+        tes10 = 117.4
     } else if (chooice1 === '33' && chooice2 === '30' && chooice3 === '20') {
-        tes10 = 186.8
+        tes10 = 165.6
     } else if (chooice1 === '33' && chooice2 === '30' && chooice3 === '25') {
-        tes10 = 229.8
+        tes10 = 209.0
     } else if (chooice1 === '11' && chooice2 === '35' && chooice3 === '15') {
-        tes10 = 152.6
+        tes10 = 168.1
     } else if (chooice1 === '11' && chooice2 === '35' && chooice3 === '20') {
-        tes10 = 203.1
+        tes10 = 223.8
       } else if (chooice1 === '11' && chooice2 === '35' && chooice3 === '25') {
-          tes10 = 249.6
+          tes10 = 277.5
       } else if (chooice1 === '22' && chooice2 === '35' && chooice3 === '15') {
-          tes10 = 226.1
+          tes10 = 261.8
       } else if (chooice1 === '22' && chooice2 === '35' && chooice3 === '20') {
-          tes10 = 315.7
+          tes10 = 316.2
       } else if (chooice1 === '22' && chooice2 === '35' && chooice3 === '25') {
-          tes10 = 385.3
+          tes10 = 396.9
       } else if (chooice1 === '33' && chooice2 === '35' && chooice3 === '15') {
-          tes10 = 260.1
+          tes10 = 260.8
       } else if (chooice1 === '33' && chooice2 === '35' && chooice3 === '20') {
-          tes10 = 325.5
+          tes10 = 339.7
       } else if (chooice1 === '33' && chooice2 === '35' && chooice3 === '25') {
-          tes10 = 375.2
+          tes10 = 410.5
       } else if (chooice1 === '11' && chooice2 === '40' && chooice3 === '15') {
-          tes10 = 270.2 
+          tes10 = 250.8 
        } else if (chooice1 === '11' && chooice2 === '40' && chooice3 === '20') {
-          tes10 = 342.6
+          tes10 = 335.0
        } else if (chooice1 === '11' && chooice2 === '40' && chooice3 === '25') {
-           tes10 = 409.3
+           tes10 = 417.3
        } else if (chooice1 === '22' && chooice2 === '40' && chooice3 === '15') {
-           tes10 = 313
+           tes10 = 320.1
        } else if (chooice1 === '22' && chooice2 === '40' && chooice3 === '20') {
-           tes10 = 387.6
+           tes10 = 413.1
        } else if (chooice1 === '22' && chooice2 === '40' && chooice3 === '25') {
-           tes10 = 467.8
+           tes10 = 508.3
        } else if (chooice1 === '33' && chooice2 === '40' && chooice3 === '15') {
-           tes10 = 364.8
+           tes10 = 341.4
        } else if (chooice1 === '33' && chooice2 === '40' && chooice3 === '20') {
-           tes10 = 509.6
+           tes10 = 493.7
        } else if (chooice1 === '33' && chooice2 === '40' && chooice3 === '25') {
-           tes10 = 629.6
+           tes10 = 624.9
        }else if (chooice1 === '11' && chooice2 === '45' && chooice3 === '15') {
-           tes10 = 369.3 
+           tes10 = 344.9 
        } else if (chooice1 === '11' && chooice2 === '45' && chooice3 === '20') {
-           tes10 = 458.5
+           tes10 = 470.4
        } else if (chooice1 === '11' && chooice2 === '45' && chooice3 === '25') {
-           tes10 = 545.8
+           tes10 = 591.4
        } else if (chooice1 === '22' && chooice2 === '45' && chooice3 === '15') {
-           tes10 = 428.3
+           tes10 = 423.8
        } else if (chooice1 === '22' && chooice2 === '45' && chooice3 === '20') {
-           tes10 = 546.4
+           tes10 = 573.7
        } else if (chooice1 === '22' && chooice2 === '45' && chooice3 === '25') {
-           tes10 = 660
+           tes10 = 716.2
        } else if (chooice1 === '33' && chooice2 === '45' && chooice3 === '15') {
-           tes10 = 504.7
+           tes10 = 499.5
        } else if (chooice1 === '33' && chooice2 === '45' && chooice3 === '20') {
-           tes10 = 680.9
+           tes10 = 694.8
        } else if (chooice1 === '33' && chooice2 === '45' && chooice3 === '25') {
-           tes10 = 834.6
+           tes10 = 870.7
        }
+
+/*End of Penentuan heat recovery berdasarkan jumlah baris, temperatur dan kecepatan memasuki evaporator */
 
 let dailyuse2 = document.getElementById("dailyuse").value;
 let monthlyuse2 = document.getElementById("monthlyuse").value;
 let biayalistrik= document.getElementById("biayalistrik").value;
 
 
+/* End of Input Kondisi Operasional */
+
+
     
     
-    
+/*Perhitungan biaya investasi HPHE */  
     let dudukan = 2 *lebar * kedalaman * 3/1000000000* 777796794
     let rangka = 4*(+adiab + +kond)*30*20/1000000000 *47709091
 
@@ -171,6 +183,8 @@ let biayalistrik= document.getElementById("biayalistrik").value;
     document.getElementById('tesst9x').innerHTML = biayatotal2
 
     document.getElementById('tesst9xx').innerHTML = biayatotal3
+
+/* End of perhitungan biaya investasi HPHE */  
    
     
     
@@ -181,11 +195,12 @@ let biayalistrik= document.getElementById("biayalistrik").value;
     
 	
 
-
+/*Perhitungan Penghematan Listrik */
 
 const pengembalian = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(tes10*dailyuse2*monthlyuse2*4*biayalistrik/1000)
 let rawpengembalian= tes10*dailyuse2*monthlyuse2*4*biayalistrik/1000
 
+/*End of Perhitungan Penghematan Listrik */
 
         
 
@@ -194,7 +209,7 @@ let rawpengembalian= tes10*dailyuse2*monthlyuse2*4*biayalistrik/1000
   
   
 
-
+/*Perhitungan Payback Period */
 
 document.getElementById('testes10').innerHTML = tes10
     
@@ -216,7 +231,9 @@ document.getElementById('sisapembagian4').innerHTML= Math.trunc((rawbiayatotal3%
 
 }
 
+/*End of Perhitungan Payback Period */
 
+/*Pengubahan Tombol 'Hitung' menjadi 'Hitung Lagi' */
   let button = document.getElementById('button3');
   let visible= document.getElementById('invisible')
   
@@ -233,4 +250,5 @@ document.getElementById('sisapembagian4').innerHTML= Math.trunc((rawbiayatotal3%
       
   
   button.addEventListener('click', changebutton)
+  /*End of Pengubahan Tombol 'Hitung' menjadi 'Hitung Lagi' */
   
